@@ -1,0 +1,34 @@
+.img-bocao {
+  width: 40px;
+  height: 40px;
+  --padding-end: 5px;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+ion-col {
+  ion-img {
+      width: 100%;
+      height: 100%;
+    }
+}
+
+ion-col {
+  ion-button {
+    --border-radius:100%;
+    position:absolute;
+    top: calc(50% - 18px);
+    left: calc(50% - 25px)
+  }
+}
+
+.button-bocao {
+  --padding-start: 0;
+}
+
+.content{
+  top: 1rem !important;
+}
