@@ -6,7 +6,6 @@
 <ion-content class="content">
 
   <ion-button class="button-bocao" color="dark" expand="block">
-    <!-- <ion-icon slot="start" name="star"></ion-icon> -->
     <ion-img class="img-bocao ion-padding-end" src="./assets/Resources/008-popcorn.png" ></ion-img>
     Agrega un Bocao
   </ion-button>
@@ -27,8 +26,25 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-</ion-content>
 
-<ion-content>
+  <ion-list style="background-color: transparent;">
+    <ion-item color="cinemap" style="margin-bottom: 15px;" *ngFor="let user of data">
+      <ion-avatar>
+        <ion-img src="./assets/003-tickets.png">
+        </ion-img>
+      </ion-avatar>
+      <ion-label>
+        {{ user.name }}<br/>
+        {{ user.created }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 
 </ion-content>
