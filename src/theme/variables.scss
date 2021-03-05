@@ -65,6 +65,32 @@
   --ion-color-cinemapp-shade: #FF0000;
   --ion-color-cinemapp-tint: #FF0000;
 
+  .ion-color-cinemap {
+    --ion-color-base: var(--ion-color-cinemapp);
+    --ion-color-base-rgb: var(--ion-color-cinemapp-rgb);
+    --ion-color-contrast: var(--ion-color-cinemapp-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-cinemapp-contrast-rgb);
+    --ion-color-shade: var(--ion-color-cinemapp-shade);
+    --ion-color-tint: var(--ion-color-cinemapp-tint);
+  }
+
+  /** cinemapDark **/
+  --ion-color-cinemapDark: #222428;
+  --ion-color-cinemapDark-rgb: 34, 36, 40;
+  --ion-color-cinemapDark-contrast: #5d5b5b;
+  --ion-color-cinemapDark-contrast-rgb: 93, 93, 93;
+  --ion-color-cinemapDark-shade: #FF0000;
+  --ion-color-cinemapDark-tint: #383a3e;
+
+  .ion-color-cinemapDark {
+    --ion-color-base: var(--ion-color-cinemapDark);
+    --ion-color-base-rgb: var(--ion-color-cinemapDark-rgb);
+    --ion-color-contrast: var(--ion-color-cinemapDark-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-cinemapDark-contrast-rgb);
+    --ion-color-shade: var(--ion-color-cinemapDark-shade);
+    --ion-color-tint: var(--ion-color-cinemapDark-tint);
+  }
+
   /** dark **/
   --ion-color-dark: #222428;
   --ion-color-dark-rgb: 34, 36, 40;
@@ -90,15 +116,6 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
-.ion-color-cinemap {
-  --ion-color-base: var(--ion-color-cinemapp);
-  --ion-color-base-rgb: var(--ion-color-cinemapp-rgb);
-  --ion-color-contrast: var(--ion-color-cinemapp-contrast);
-  --ion-color-contrast-rgb: var(--ion-color-cinemapp-contrast-rgb);
-  --ion-color-shade: var(--ion-color-cinemapp-shade);
-  --ion-color-tint: var(--ion-color-cinemapp-tint);
-}
-
 @media (prefers-color-scheme: dark) {
   /*
    * Dark Colors
@@ -114,6 +131,14 @@
     --ion-color-cinemapp-contrast-rgb: 255, 255, 255;
     --ion-color-cinemapp-shade: #FF0000;
     --ion-color-cinemapp-tint: #FF0000;
+
+  /** cinemapDark **/
+  --ion-color-cinemapDark: #f4f5f8;
+  --ion-color-cinemapDark-rgb: 34, 36, 40;
+  --ion-color-cinemapDark-contrast: #5d5b5b;
+  --ion-color-cinemapDark-contrast-rgb: 93, 93, 93;
+  --ion-color-cinemapDark-shade: #FF0000;
+  --ion-color-cinemapDark-tint: #383a3e;
 
     --ion-color-primary: #428cff;
     --ion-color-primary-rgb: 66,140,255;

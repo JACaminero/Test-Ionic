@@ -1,0 +1,31 @@
+<ion-header style="z-index: 0;" class="ion-margin-top">
+  <ion-img src="./assets/029-cinema.png"></ion-img>
+  <div style="text-align:center;">
+    <span class="title">CineMap</span>
+  </div>
+</ion-header>
+
+<ion-content>
+  <ion-grid >
+    <ion-row justify-content-center>
+      <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <ion-item color="cinemapDark">
+            <ion-input name="email" type="email" placeholder="example@email.com" required></ion-input>
+          </ion-item>
+          <ion-item color="cinemapDark">
+            <ion-input name="password" type="password" placeholder="Contraseña" required></ion-input>
+          </ion-item>
+
+          <div class="router">
+            <ion-router-link color="cinemap">¿Olvidaste tu contraseña?</ion-router-link>
+          </div>
+
+          <ion-button class="ion-margin-top regitster-btn" size="large" color="cinemap" expand="block">Iniciar Sesion</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<div class="ion-margin-bottom router">
+  <ion-router-link href="register" color="cinemap">No tienes cuenta, regístrate</ion-router-link>
+</div>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +9,30 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  order = {
+    movieName: '',
+    amountofTickets: 0,
+    inProcess: null,
+  };
+  constructor() {
+
+    const db = firebase.firestore();
+
+    db.collection("orders")
+    .where("inProcess", "==", true)
+    .get()
+    .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          console.log(doc.data())
+        });
+    })
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
+
+    return null;
+
+  }
+
 
 }

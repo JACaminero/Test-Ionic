@@ -1,12 +1,16 @@
-
 <ion-header>
-  <ion-img class="top-image" src="./assets/kilyan-sockalingum-nW1n9eNHOsc-unsplash.jpg"></ion-img>
+  <ion-router-link href="login" color="cinemap">Login</ion-router-link> /
+  <ion-router-link href="register" color="cinemap">Registrarse</ion-router-link>
+    <span class="title"><strong>CineMap</strong></span> <br/>
+    <span class="sub-title">Agenda tus entradas en cualquier momento.</span>
+    <ion-img class="top-image" src="./assets/kilyan-sockalingum-nW1n9eNHOsc-unsplash.jpg">
+    </ion-img>
 </ion-header>
 
-<ion-content class="content">
+<ion-content>
 
   <ion-button class="button-bocao" color="dark" expand="block">
-    <ion-img class="img-bocao ion-padding-end" src="./assets/Resources/008-popcorn.png" ></ion-img>
+    <ion-img class="img-bocao ion-padding-end" src="./assets/Resources/008-popcorn.png"></ion-img>
     Agrega un Bocao
   </ion-button>
 
@@ -18,24 +22,24 @@
         </ion-button>
         <ion-img src="./assets/eiliv-sonas-aceron-iyqj9IKpQK0-unsplash.jpg"></ion-img>
       </ion-col>
-      <ion-col >
-          <ion-button color="cinemap" >
-            <ion-icon name="add"></ion-icon>
-          </ion-button>
-          <ion-img src="./assets/charles-deluvio-PvAAYZx-yf8-unsplash.jpg"></ion-img>
+      <ion-col>
+        <ion-button color="cinemap" >
+          <ion-icon name="add"></ion-icon>
+        </ion-button>
+        <ion-img src="./assets/charles-deluvio-PvAAYZx-yf8-unsplash.jpg"></ion-img>
       </ion-col>
     </ion-row>
   </ion-grid>
 
   <ion-list style="background-color: transparent;">
-    <ion-item color="cinemap" style="margin-bottom: 15px;" *ngFor="let user of data">
+    <ion-item button color="cinemap" style="margin-bottom: 15px;" *ngFor="let movie of data">
       <ion-avatar>
         <ion-img src="./assets/003-tickets.png">
         </ion-img>
       </ion-avatar>
       <ion-label>
-        {{ user.name }}<br/>
-        {{ user.created }}
+        {{ movie.name }}<br />
+        {{ movie.startTime }} - {{ movie.finishTime }}
       </ion-label>
     </ion-item>
   </ion-list>

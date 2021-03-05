@@ -4,6 +4,11 @@
   --padding-end: 5px;
 }
 
+.top-image{
+  max-height:250px;
+  height:250px
+}
+
 .container {
   position: relative;
   width: 50%;
@@ -15,20 +20,29 @@ ion-col {
       height: 100%;
     }
 }
+.title {
+  font-size:xx-large;
+}
+
+.sub-title {
+  top:70%;
+}
+
+span {
+  position: absolute;
+  top: 55%;
+  left: 15%;
+}
 
 ion-col {
   ion-button {
-    --border-radius:100%;
-    position:absolute;
+    position: absolute;
     top: calc(50% - 18px);
-    left: calc(50% - 25px)
+    left: calc(50% - 25px);
+    --border-radius: 100%;
   }
 }
 
 .button-bocao {
   --padding-start: 0;
-}
-
-.content{
-  top: 1rem !important;
 }

@@ -1,17 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+  <span class="title"><strong>Advengers: End Game</strong></span> <br/>
+  <span class="sub-title">4:00 PM - 7:00 PM </span>
+  <ion-img class="top-image" src="./assets/hipertextual-ver-avengers-endgame-4k-2019810743.jpeg">
+  </ion-img>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content fullscreen>
+  <ion-item  style="--color: black;--background: white">
+    <ion-label>No. de Tickets</ion-label>
+    <ion-select>
+      <ion-select-option value="1">1</ion-select-option>
+      <ion-select-option value="2">2</ion-select-option>
+      <ion-select-option value="3">3</ion-select-option>
+      <ion-select-option value="4">4</ion-select-option>
+    </ion-select>
+  </ion-item>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="8">
+        <div>Tickets para: {{ order.movieName }}</div>
+      </ion-col>
+      <ion-col size="4">
+        <div>$</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
